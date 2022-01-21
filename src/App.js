@@ -7,6 +7,7 @@ import Cookies from './helpers/Cookies';
 import frenchMessages from 'ra-language-french';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 import { SpecialsEdit, SpecialsList } from './components/specials';
+import dashboard from './components/dashboard';
 
 const i18nProvider = polyglotI18nProvider(() => frenchMessages, "fr")
 
@@ -27,6 +28,7 @@ const dataProvider = simpleRestProvider(
 const App = () => (
   <Admin
   title="Restaurant"
+  dashboard={dashboard}
   authProvider={authProvider}
   dataProvider={dataProvider}
   locale='fr'
@@ -36,7 +38,6 @@ const App = () => (
      list={SpecialsList}
      edit={SpecialsEdit}
     />
-
   </Admin>
 )
 

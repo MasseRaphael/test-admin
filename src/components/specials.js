@@ -14,25 +14,25 @@ import {
     FunctionField,
 } from "react-admin";
 
-const MenuToolbar = (props) => {
-    <Toolbar { ...props }>
+const MenuToolbar = (props) => (
+    <Toolbar {...props}>
         <SaveButton />
     </Toolbar>
-};
+);
 
-const FilenameField = (props) => {
-    <FunctionField { ...props }
+export const FilenameField = (props) => (
+    <FunctionField {...props}
     render={(record) => (
         <img src={`https://api.gill-cote-bistro.fr${record.image.url}`} />
     )}
     />
-};
+);
 
 export const SpecialsList = (props) => (
     <Grid container justify="space-around" direction="row" alignItems="center">
         <Grid item xs={12} md={8} lg={9} direction="column">
             <List { ...props }>
-                <Datagrid>
+                <Datagrid rowClick="edit">
                     <Grid
                     container
                     justify="center"
@@ -60,10 +60,13 @@ export const SpecialsEdit = (props) => (
         <Grid items xs={12} md={8} lg={7}>
             <Edit title="Modifier" {...props}>
                 <SimpleForm toolbar={<MenuToolbar />}>
-                    <TextField
-                    fullWidth
-                    source="title"
-                    label="Titre" />
+                    <TextField fullWidth source="title" label="Titre" />
+                    <FilenameField />
+                    <ImageInput
+                    multiple={false}
+                    source="image"
+                    accept="image/*"
+                    />
                 </SimpleForm>
             </Edit>
         </Grid>
