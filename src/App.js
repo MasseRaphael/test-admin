@@ -6,7 +6,7 @@ import authProvider from './authProvider';
 import Cookies from './helpers/Cookies';
 import frenchMessages from 'ra-language-french';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
-import { SpecialsList } from './components/specials';
+import { SpecialsEdit, SpecialsList } from './components/specials';
 
 const i18nProvider = polyglotI18nProvider(() => frenchMessages, "fr")
 
@@ -32,7 +32,10 @@ const App = () => (
   locale='fr'
   i18nProvider={i18nProvider}
   >
-    <Resource name="specials" list={SpecialsList} />
+    <Resource name="specials"
+     list={SpecialsList}
+     edit={SpecialsEdit}
+    />
 
   </Admin>
 )

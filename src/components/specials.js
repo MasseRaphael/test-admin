@@ -33,9 +33,39 @@ export const SpecialsList = (props) => (
         <Grid item xs={12} md={8} lg={9} direction="column">
             <List { ...props }>
                 <Datagrid>
-                    <TextField label="title" source="title"></TextField>
+                    <Grid
+                    container
+                    justify="center"
+                    direction="column"
+                    alignItems="center">
+                        <TextField label="title" source="title"></TextField>
+                        <Grid items xs={10} lg={8}>
+                            <FilenameField />
+                        </Grid>
+                        <TextField label="Dexcription" source="description" />
+                    </Grid>
                 </Datagrid>
             </List>
+        </Grid>
+    </Grid>
+);
+
+export const SpecialsEdit = (props) => (
+    <Grid
+    container
+    justify="space-around"
+    direction="row"
+    alignItems="center"
+    >
+        <Grid items xs={12} md={8} lg={7}>
+            <Edit title="Modifier" {...props}>
+                <SimpleForm toolbar={<MenuToolbar />}>
+                    <TextField
+                    fullWidth
+                    source="title"
+                    label="Titre" />
+                </SimpleForm>
+            </Edit>
         </Grid>
     </Grid>
 )

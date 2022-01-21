@@ -1284,7 +1284,7 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@material-ui/core@^4.12.1":
+"@material-ui/core@^4.12.1", "@material-ui/core@^4.12.3":
   version "4.12.3"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.12.3.tgz#80d665caf0f1f034e52355c5450c0e38b099d3ca"
   integrity sha512-sdpgI/PL56QVsEJldwEe4FFaFTLUqN+rd7sSZiRCdx2E/C7z5yK0y/khAWVBH24tXwto7I1hCzNWfJGZIYJKnw==
@@ -7304,6 +7304,13 @@ ra-language-english@^3.19.6:
   version "3.19.6"
   resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-3.19.6.tgz#8ff67bef4a645032059a48f73a70dac57b9d6892"
   integrity sha512-m6pZn1LmehqN2MlUQ9OymnM7BJ43dxz4gFsNavn0tBrqp7Zc54/lMsJldWpXgYvJPn94FeFIEHYiSWWrTQSd+g==
+  dependencies:
+    ra-core "^3.19.6"
+
+ra-language-french@^3.19.6:
+  version "3.19.6"
+  resolved "https://registry.yarnpkg.com/ra-language-french/-/ra-language-french-3.19.6.tgz#49712c595446b3370d8bfd4f9ef3fe688b3d7e93"
+  integrity sha512-BtiybNrJPbSAMMGMHhKfWYWSbOuWYwRoVAf74I+Xm/ISTvAFFRNlAOPy4+I7FsMq/8n5q6DmaBE8I3lsvPL0Sg==
   dependencies:
     ra-core "^3.19.6"
 
