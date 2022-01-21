@@ -11,11 +11,11 @@ import { SpecialsList } from './components/specials';
 const i18nProvider = polyglotI18nProvider(() => frenchMessages, "fr")
 
 const httpClient = (url, options = {}) =>{
-  if (!options.header) {
-    options.header = new Headers({ Accept: "application/json"});
+  if (!options.headers) {
+    options.headers = new Headers({ Accept: "application/json"});
   }
   const token = Cookies.getCookie("token");
-  options.Headers.set("Authorization", `Beare ${token}`);
+  options.headers.set("Authorization", `Bearer ${token}`);
   return fetchUtils.fetchJson(url, options);
 };
 
