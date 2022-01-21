@@ -32,7 +32,7 @@ const App = () => (
   locale='fr'
   i18nProvider={i18nProvider}
   >
-    <Resource list={SpecialsList} />
+    <Resource name="specials" list={SpecialsList} />
 
   </Admin>
 )
